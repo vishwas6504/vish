@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calc-body {
+            width: 275px;
+            margin: auto;
+            min-height: 400px;
+            box-shadow: 0 8px 50px -7px black;
+            background: #3A4655;
+        }
+        .calc-screen {
+            padding: 1rem;
+        }
+        #calc-operation {
+            font-size: 1.3rem;
+            text-align: right;
+            color: #727B86;
+            padding-bottom: .5rem;
+        }
+        #calc-typed {
+            font-size: 2rem;
+            text-align: right;
+            color: #fff;
+        }
+        .calc-button-row{
+            display: table;
+        }
+        .calc-button-row button {
+            display: table-cell;
+            width: 25%;
+            background: #425062;
+            color: #fff;
+            height: 65px;
+            font-size: 1.3rem;
+            border: none;
+            border-color:#3C4857;
+            border-width: 1px 1px 0px 0;
+            border-style: solid;
+        }
+        .calc-button-row (link unavailable) {
+            color: #ff7665;
+        }
+        .calc-button-row button.opt {
+            color: #ffbc56;
+        }
+        .calc-button-row button:nth-child(4n){
+            border-right: none;
+        }
+        .calc-button-row button:active {
+            position: relative;
+            top: 1px;
+        }
+        .calc-button-row button:hover {
+            background: #3e4b5c;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc-body">
+         <!-- Calculator Display Screen -->
+         <div class="calc-screen">
+            <div id="calc-operation"> </div>
+            <div id="calc-typed"></div>
+        </div>
+        <!-- Calculator Buttons -->
+        <div class="calc-button-row">
+            <button class="ac">AC</button>
+            <button class="opt">+/-</button>
+            <button class="opt">%</button>
+            <button class="opt">/</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="opt">*</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="opt">-</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="opt">+</button>
+            <button>0</button>
+            <button>.</button>
+            <button>=</button>
+        </div>
+    </div>
+
+    <script>
+        // Get the elements
+        const calcOperation = document.getElementById('calc-operation');
+        const calcTyped = document.getElementById('calc-typed');
+        const buttons = document.querySelectorAll('.calc-button-row button');
+
+        // Initialize variables
+        let operation = '';
+        let typed = '';
+        let result = '';
+
+        // Add event listeners to buttons
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const value = button.textContent;
+                switch (value) {
+                    case 'AC':
+                        operation = '';
+                        typed = '';
+                        result = '';
+                        calcOperation.textContent = '';
+                        calcTyped.textContent = '';
+                        break;
+                    case '+/-':
+                        typed = (typed * -1).toString();
+                        calcTyped.textContent = typed;
+                        break;
+                    case '%':
+                        typed = (typed / 100).toString();
+                        calcTyped.textContent = typed;
+                        break;
+                    case '=':
+                        result = eval(operation + typed);
+                        calcOperation.textContent = '';
+                        calcTyped.textContent = result;
+                        operation = '';
+                        typed = '';
+                        break;
+                    default:
+                        if (value === '+' || value === '-' || value === '*' || value === '/') {
+                            operation += typed + value;
+                            typed = '';
+                            calcOperation.textContent = operation;
+                        } else {
+                            typed += value;
+                            calcTyped.textContent = typed;
+                        }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
