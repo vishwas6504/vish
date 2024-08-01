@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+  Google Form
+</title>
+<style>
+body {
+  background-image: url(downloads.jpeg);
+  
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: lightgrey;
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #cd2525;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(red, green, blue);
+  box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ea0707;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: red;
+  color: lightcoral;
+  padding: 10px 20px;
+  border:black; 
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #45a049;
+
+}
+</style>
+
+<body>
+
+<div class="container">
+  <h1>Google Form</h1>
+
+  <form>
+    <label for="name">First Name:</label>
+    <input type="text" id="name" name="First name" required>
+    
+    <label for="name">Last Name:</label>
+    <input type="text" id="name" name=" name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <lable for="DOB">DOB:</lable>
+    <input type="date" id="DOB" required>
+
+    <label for="Gender">Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+
+    <label for="age">Age:</label>
+    <input type="number" id="Age" required>
+
+    <lable for="phone number">Phone number:</lable>
+    <input type="tel" id="phone number" required>
+
+    <center>
+    <button type="submit">Submit</button>
+
+  </center>
+  <p>
+    For any issue please vist the help center<a href="file:///D:/html/support.html">click me</a>
+    <br>
+    <h2>OR</h2>
+    </br>
+  
+    contact+918855664422
+  
+  </p>
+  </div>
+  </form>
+</head>
+</body>
+</html>
