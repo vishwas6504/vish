@@ -1,0 +1,44 @@
+This code takes or considers function as a property value.
+<!DOCTYPEhtml> 
+<html> 
+<head> 
+  <title> 
+      JavaScript Object Methods 
+  </title> 
+</head> 
+<body> 
+  <h1>KHK institute </h1> 
+  <h2>computer science </h2>
+  <h3>JavaScript object short hand method</h3> 
+<p> 
+    JavaScript allows you to define methods of an object using the object literal syntax as shown in the following example:
+  </p> 
+  
+  <p id="demo"></p> 
+  <script> 
+ 
+
+ 
+let person = 
+{     
+    firstName: 'John',     
+    lastName: 'Doe',    
+     greet: function ()
+      {         
+        console.log('Hello, World!'); 
+    }, 
+    getFullName: function () 
+    {        
+         return this.firstName + ' ' + this.lastName; 
+    } 
+}; 
+ 
+ 
+console.log(person.getFullName()); 
+document.getElementById("demo").innerHTML=person.getFullName();
+
+
+  
+</script>
+</body>
+</html>

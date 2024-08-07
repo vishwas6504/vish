@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+ 
+<object id="myObject" width="250" height="200" data="helloworld.swf"></object> 
+ 
+<p>Click the button to display the URL of the object.</p> 
+ 
+<button onclick="myFunction()">Try it</button> 
+ 
+<p id="demo"></p> 
+ 
+<script> function myFunction() {   var x = document.getElementById("myObject").data;  
+ document.getElementById("demo").innerHTML = x; 
+} 
+</script> 
+ 
+</body> 
+</html>

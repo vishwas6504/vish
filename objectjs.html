@@ -1,0 +1,36 @@
+  This code takes or considers function as a property value.
+  <!DOCTYPEhtml> 
+<html> 
+<head> 
+    <title> 
+        JavaScript Object Methods 
+    </title> 
+</head> 
+<body> 
+    <h1>KHK institute </h1> 
+    <h2>computer science </h2>
+    <h3>JavaScript Object Method</h3> 
+<p> 
+        studentDetail is a function definition, it is stored as a property value. 
+    </p> 
+    <p id="demo"></p> 
+    <script>        
+     // Object creation 
+             var student =
+              {             
+                name: "Dev",            
+               class : "5th sem",             
+              section : "CSE",
+               author:"vishwas",  
+            studentDetails : function() {                 
+                return this.name + " " 
+                + this.class+ " " 
+                + this.section+ " " 
+                + this.author  ; 
+            } 
+        };
+        // Display object data        
+                document.getElementById("demo").innerHTML=student.studentDetails(); 
+    </script> 
+</body>
+</html>

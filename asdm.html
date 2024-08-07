@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arithematic Operation</title>
+	<style>
+		body {
+		  
+		  
+		  font-family: Arial, sans-serif;
+		}
+		
+		.container {
+		  background-color: lightgrey;
+		  width: 500px;
+		  margin: 0 auto;
+		  padding: 20px;
+		  border: 1px solid #cd2525;
+		}
+		
+		h1 {
+		  text-align: center;
+		}
+		
+		label {
+		  display: block;
+		  margin-bottom: 8px;
+		}
+		
+		input[type="text"],
+		input[type="email"],
+		textarea {
+		  width: 100%;
+		  padding: 10px;
+		  margin-bottom: 20px;
+		  border: 1px solid rgb(red, green, blue);
+		  box-sizing: border-box;
+		}
+		
+		input[type="radio"],
+		input[type="checkbox"] {
+		  margin-right: 10px;
+		}
+		
+		select {
+		  width: 100%;
+		  padding: 10px;
+		  margin-bottom: 10px;
+		  border: 1px solid #ea0707;
+		  box-sizing: border-box;
+		}
+		
+		button {
+		  background-color:black;
+		  color: white ;
+		  padding: 10px 20px;
+		  border:black; 
+		  cursor: pointer;
+		  text-align: center;
+		}
+		
+		button:hover {
+		  background-color: #45a049;
+		
+		}
+        #result{
+            font-size: medium;
+            font-style: italic;
+
+        }
+		</style>
+</head>
+
+<body>
+	<div class="container">
+        <center>
+            <table border="15px"><td>
+                <center>
+        
+        <h1>Arithematic Operation</h1>
+	
+        
+    1st Number: <input type="number" id="num1">
+    
+    <br>
+    <br>
+    2nd Number: <input type="number" id="num2">
+    <br>
+    <br>
+    3nd Number: <input type="number" id="num3">
+    <br>
+    <br>
+    <button onclick="largest()">Largest</button>
+    <br>
+    <br>
+    
+    <button onclick="add()">Add</button>
+    <br>
+	<br>
+    <button onclick="sub()">Subtract</button>
+	<br>
+	<br>
+    <button onclick="mul()">Multiply</button>
+	<br>
+	<br>
+    <button onclick="div()">Divide</button>
+        
+    <p id="result">The Result is : </p>
+            </center>
+     
+    <script>
+        function add() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var num3 = parseFloat(document.getElementById("num3").value);
+            var result = num1 + num2 + num3;
+            document.getElementById("result").innerHTML = "The result is : " + result;
+        }
+		'<br>'
+        function sub() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var num3 = parseFloat(document.getElementById("num3").value);
+            var result = num1 - num2 - num3;
+            document.getElementById("result").innerHTML = "The result is : " + result;
+        }
+		'<br>'
+
+        function mul() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var num3 = parseFloat(document.getElementById("num3").value);
+            var result = num1 * num2 * num3;
+            document.getElementById("result").innerHTML = "The result is : " + result;
+        }
+		'<br>'
+        function findLargest() {
+			var num1 = parseFloat(document.getElementById('num1').value);
+			var num2 = parseFloat(document.getElementById('num2').value);
+			var num3 = parseFloat(document.getElementById('num3').value);
+			var result = (num1 > num2) ? (num1 > num3 ? num1 : num3) : (num2 > num3 ? num2 : num3);
+			document.getElementById("result").innerHTML = "The result is : " + result;
+        }
+
+        function div() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result;
+            if (num2 === 0) {
+                result = "Cannot divide by zero";
+            } else {
+                result = num1 / num2;
+            }
+            document.getElementById("result").innerHTML = "The result is : " + result;
+        }
+
+		</script>
+		</div>
+		</body>
+</html>

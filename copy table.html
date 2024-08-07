@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+  copy cat
+</title>
+<style>
+body {
+  
+  
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: lightgrey;
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #cd2525;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(red, green, blue);
+  box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ea0707;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: red;
+  color: lightcoral;
+  padding: 10px 20px;
+  border:black; 
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #45a049;
+
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>copy cat</h1>
+      
+            
+                Field 1<input type="text" id="name"  >
+        
+                Field 2<input type="text" id="Name" >
+
+                Field 3<input type="text" id="bro" >
+            
+
+                <center>
+                    <button onclick="myFunction()">copy text</button>
+
+
+                    <script>
+                        function myFunction() {
+                        
+                        document.getElementById("bro").value= 
+                        document.getElementById("name").value+
+                        document.getElementById("Name").value;
+                        }
+                        </script>
+                
+                </center>
+           
+              </div>
+              </body>
+              </html>

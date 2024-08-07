@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+	<title> Calculator </title>
+    <style>
+
+    body {
+        background-image: url(downloads.jpeg);
+        
+        font-family: Arial, sans-serif;
+      }
+      
+      .container {
+        background-color: lightgrey;
+        width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #cd2525;
+      }
+      
+      h1 {
+        text-align: center;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+      
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid rgb(red, green, blue);
+        box-sizing: border-box;
+      }
+      
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
+      
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ea0707;
+        box-sizing: border-box;
+      }
+      
+      button {
+        background-color: red;
+        color: lightcoral;
+        padding: 10px 20px;
+        border:black; 
+        cursor: pointer;
+        text-align: center;
+      }
+      
+      button:hover {
+        background-color: #45a049;
+      
+      }
+      </style>
+</head>
+<body>
+	<h2>Calculator</h2>
+	<input id="num1" type="number" placeholder="Number 1">
+	<input id="num2" type="number" placeholder="Number 2">
+	<button onclick="calculate()">Calculate</button>
+    <button onclick="add()">add</button>
+	<p id="result"></p>
+<Script>
+function calculate() {
+	var num1 = document.getElementById('num1').value;
+	var num2 = document.getElementById('num2').value;
+	var multiplication = num1 * num2;
+	var division = num1 / num2;
+	document.getElementById('result').innerHTML = 
+		'Multiplication: ' + multiplication + '<br>' + 
+		'Division: ' + division;
+}</script>
+</body>
+</html>

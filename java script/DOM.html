@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Document Object Example</title>
+</head>
+<body>
+<h1>Hello, Document Object!</h1>
+<p>This is an example of using the document object.</p>
+<button id="myButton">Click Me</button>
+
+<script>
+// Accessing and modifying elements
+const heading = document.querySelector('h1');
+heading.textContent = 'Hello, Updated Document Object!';
+
+const paragraph = document.querySelector('p');
+paragraph.style.color = 'blue';
+
+// Handling events const button = document.getElementById('myButton');
+button.addEventListener('click', function() {
+alert('Button clicked!');
+});
+</script>
+</body>
+</html>
+
+<center>
+    <button onclick="myFunction()">submit</button>
+    <script>
+        function myFunction() {
+          alert("Issue submited successfully!");
+        }
+        </script>
+  </center>

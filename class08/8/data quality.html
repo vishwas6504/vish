@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>
+        Data Quality
+    </title>
+</head>
+  
+<body style="text-align:center;">
+  
+    <div style="background-color: green;">
+          
+        <h1>KHKIE !!</h1>
+        <b>
+            Data Quality : lower case 
+            value is returned
+        </b>
+      
+        <p id="GFG"></p>
+    </div>
+      
+    <script>
+        var person = {
+            language : "KHKIE",
+              
+            get lang() {
+                return this.language.toLowerCase();
+            }
+        };
+        
+          
+        // Display data from the object using a getter
+        document.getElementById("GFG").innerHTML 
+                = person.lang;
+    </script>
+</body>
+  
+</html>

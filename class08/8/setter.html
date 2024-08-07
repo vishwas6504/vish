@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        JavaScript Getter 
+    </title>
+</head>
+  
+<body style="text-align:center;">
+  
+    <div style="background-color: green;">
+          
+        <h1>
+            Welcome to KHKIntituteof Engineering!.
+        </h1>
+        <h2>
+            JavaScript Getters
+        </h2>
+        <p id="GFG"></p>
+    </div>
+    <script>
+        // Create an object:
+        var person = {
+            name: "KHKIE",
+            set lang(value) {
+                return this.name;
+            }
+        };
+          
+        // Display data from the object using a getter
+        document.getElementById("GFG").innerHTML
+                = person.name;
+    </script>
+</body>  
+</html>
