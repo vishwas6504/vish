@@ -3,8 +3,8 @@ Example:
 <html>
 <body>
 
-<h2>JavaScript Objects</h2>
-<p>You cannot add a new property to a constructor function.</p>
+<h1>JavaScript Objects</h1>
+<p>Using an object constructor:</p>
 <p id="demo"></p>
 
 <script>
@@ -13,12 +13,12 @@ function Person(first, last, age, eye) {
   this.lastName = last;
   this.age = age;
   this.eyeColor = eye;
+  this.nationality = "Indian";
 }
-Person.nationality = "English";
 const myFather = new Person("John", "Doe", 50, "blue");
 const myMother = new Person("Sally", "Rally", 48, "green");
 document.getElementById("demo").innerHTML =
-"The nationality of my father is " + myFather.nationality; 
+"The nationality of my father is " + myFather.nationality + ". The nationality of my mother is " + myMother.nationality;
 </script>
 
 </body>

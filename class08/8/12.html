@@ -1,9 +1,9 @@
+Example:
 <!DOCTYPE html>
 <html>
 <body>
 
 <h2>JavaScript Objects</h2>
-<p>The prototype property allows you to add new methods to objects constructors:</p>
 <p id="demo"></p>
 
 <script>
@@ -13,10 +13,12 @@ function Person(first, last, age, eye) {
   this.age = age;
   this.eyeColor = eye;
 }
-Person.prototype.nationality ="Bharat";
-const myFather = new Person("John", "Doe", 50, "blue");
+Person.prototype.name = function() {
+  return this.firstName + " " + this.lastName
+};
+const myFather = new Person("sunil", "chhetri", 50, "blue");
 document.getElementById("demo").innerHTML =
-"The nationality of my father is " + myFather.nationality; 
+"Father of Indian fotball is  " + myFather.name(); 
 </script>
 
 </body>
