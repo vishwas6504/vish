@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:darkgray;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the container for the registration form */
+.container {
+  background-color:rgb(182, 144, 97);
+  margin: 50px auto;
+  padding: 40px;
+  width: 50%;
+  max-width: 500px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Style the input fields */
+input[type=text],
+input[type=password],
+input[type=date] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background:wheat;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=date]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Style the submit button */
+button {
+  background-color: #4CAF50;
+  color: green;
+  padding: 15px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+/* Style the reset button */
+.reset {
+  background-color: #f44336;
+}
+
+.reset:hover {
+  opacity: 1;
+}
+
+/* Style the radio buttons */
+input[type=radio] {
+  margin: 5px 0 22px 0;
+  display: inline-block;
+}
+
+/* Style the labels */
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Style the navigation buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.nav-buttons button {
+  padding: 10px 20px;
+  border: none;
+  background-color:cornflowerblue;
+  cursor: pointer;
+}
+
+.nav-buttons button:hover {
+  background-color: #ccc;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Registration page</h1>
+
+  <form>
+    <label for="employee">Employee:</label>
+    <input type="text" id="employee" name="employee" placeholder="Enter your name" required>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" placeholder="Your address" required>
+
+    <label for="company-opinion">Employee opinion about company:</label>
+    <input type="radio" id="good" name="company-opinion" value="Good">
+    <label for="good">Good</label><br>
+    <input type="radio" id="very-good" name="company-opinion" value="Very Good">
+    <label for="very-good">Very Good</label><br>
+    <input type="radio" id="excellent" name="company-opinion" value="Excellent">
+    <label for="excellent">Excellent</label><br>
+    <input type="radio" id="worst" name="company-opinion" value="Worst">
+    <label for="worst">Worst</label><br>
+    <input type="radio" id="very-worst" name="company-opinion" value="Very Worst">
+    <label for="very-worst">Very Worst</label><br>
+
+    <label for="programming-skills">Employee skills in programming:</label>
+    <input type="checkbox" id="python" name="programming-skills" value="Python">
+    <label for="python">Python</label><br>
+    <input type="checkbox" id="java" name="programming-skills" value="Java">
+    <label for="java">Java</label><br>
+    <input type="checkbox" id="js" name="programming-skills" value="JS">
+    <label for="js">JS</label><br>
+
+    <label for="date-of-birth">Date of birth of employee:</label>
+    <input type="date" id="date-of-birth" name="date-of-birth" required>
+
+    <button type="submit">Submit</button>
+    <button type="reset" class="reset">Reset</button>
+   
+  </form>
+
+  <div class="nav-buttons">
+    <button><a href="http://127.0.0.1:3000/class9.html/timetable.html">Time table</a>
+        </button>
+        <button><a href="http://127.0.0.1:3000/support.html">FeedBack</a>
+        </button>
+        <button><a href="https://www.w3schools.com/html/">other website</a>
+        </button>
+        
+  </div>
+  
+</div>
+
+
+   
+
+</body>
+</html>

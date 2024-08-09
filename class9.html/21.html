@@ -1,0 +1,22 @@
+The keys() Method
+A Set has no keys.
+keys() returns the same as values().
+This makes Sets compatible with Maps.
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Sets</h2>
+<p>Set.keys() returns a Set Iterator:</p>
+
+<p id="demo"></p>
+
+<script>
+// Create a Set
+const letters = new Set(["a","b","c"]);
+
+// Display set.size
+document.getElementById("demo").innerHTML = letters.keys();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Map Objects</h2>
+<p>Using Map.set():</p>
+<p id="demo"></p>
+<script>
+const people = new Map([
+  ["John", 25],
+  ["Alice", 30],
+  ["Bob", 20]
+]);
+const oldValue = people.get("John");
+people.set("John", 31);
+const newValue = people.get("John");
+document.getElementById("demo").innerHTML = `Old age: ${oldValue} <br> New age: ${newValue}`;
+</script>
+</body>
+</html>

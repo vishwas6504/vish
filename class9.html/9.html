@@ -1,12 +1,11 @@
-•	The size Property
-The size property returns the number of elements in a Map:
-Example
 <!DOCTYPE html>
 <html>
 <body>
 <h2>JavaScript Maps</h2>
-<p>Using Map.size:</p>
-<p id="demo"></p>
+        <p>Before deleting</p>
+        <p>after deleting</p>
+        <p id="demo"></p>
+        <p id="demo1"></p>
 <script>
 // Create a Map
 const fruits = new Map([
@@ -14,7 +13,12 @@ const fruits = new Map([
   ["bananas", 300],
   ["oranges", 200]
 ]);
+// Delete an Element
 document.getElementById("demo").innerHTML = fruits.size;
+
+fruits.delete("apples");
+
+document.getElementById("demo1").innerHTML = fruits.size;
 </script>
 </body>
 </html>

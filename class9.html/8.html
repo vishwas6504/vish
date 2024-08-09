@@ -1,19 +1,22 @@
-•	The size Property
-The size property returns the number of elements in a Map:
+•	The delete() Method
+The delete() method removes a Map element:
 Example
 <!DOCTYPE html>
 <html>
 <body>
 <h2>JavaScript Maps</h2>
-<p>Using Map.size:</p>
+<p>Deleting Map elements:</p>
 <p id="demo"></p>
 <script>
 // Create a Map
 const fruits = new Map([
   ["apples", 500],
   ["bananas", 300],
-  ["oranges", 200]
+  ["oranges", 200],
+  ["mango",800]
 ]);
+// Delete an Element
+fruits.delete("apples");
 document.getElementById("demo").innerHTML = fruits.size;
 </script>
 </body>
